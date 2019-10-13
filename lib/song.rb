@@ -16,7 +16,6 @@ class Song
   def self.new_by_filename(filename)
     new_song = Song.new(filename)
     new_song.artist = artist_name
-  
   end
 
 
