@@ -17,6 +17,7 @@ class Song
     file_name = filename.split(' - ')
     new_song = Song.new(file_name[1])
     new_song.artist = file_name[0]
+    new_song
     
     #file_name = 'Michael Jackson - Black or White - pop.mp3'
   end
