@@ -18,7 +18,7 @@ class Artist
   end
   
   def add_song
-    Song.artist
+    Song.artist = self
   end
 
   def self.find_or_create_by_name
