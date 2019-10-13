@@ -25,9 +25,15 @@ class Artist
 
   def self.find_or_create_by_name(name)
     if Artist.all.select {|artist| artist.name == name} == nil
-      Artist.new(name)
+      new_artist = self.new(name)
     else Artist.all.select {|artist| artist.name == name}
       end
+      
+    if self.all.detect { |artist| artist.name == artist_name } == nil 
+      new_artist = self.new(artist_name)
+    else 
+      self.all.detect { |artist| artist.name == artist_name }
+    end 
   end
   
   def print_songs
