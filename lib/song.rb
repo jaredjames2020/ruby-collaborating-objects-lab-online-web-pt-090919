@@ -22,7 +22,6 @@ class Song
 
   def artist_name
     Artist.find_or_create_by_name(@filename[0])
-  
   end
 
 end
